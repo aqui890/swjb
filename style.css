@@ -23,34 +23,52 @@ html{
 /* s :container */
 #container{
     width: 100%;
-    height: 100%;
+    height: 700px;
+
+    padding-top: 100px;
 
     background: linear-gradient(to bottom, #98DFFF, rgba(0, 0, 0, 0.6)), url(images/bgi.png) no-repeat;
     background-size: cover;
     background-position: center;
+    /* background-color: blue; */
+
+    /* position: relative; */
 
     color: white;
+    margin-top: -100px;
+    padding-top: 100px;
 }
 /* e : container */
 
 /* s : header */
-header{
+#header{
+    position: fixed;
+    top: 0;
     width: 100%;
     height: 100px;
+
+    background-color: transparent;
+
+    /* opacity: 0; */
+
+    z-index: 1000;
 
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-header .logo{
+#header .logo{
     width: 200px;
     height: 80px;
     margin-left: 400px;
 }
-header .logo span{
+#header .logo span{
     display: inline-block;
 
+    color: white;
     text-align: center;
     font-size: 60px;
     font-weight: bold;
@@ -59,11 +77,11 @@ header .logo span{
 
     transition: 0.3s;
 }
-header .logo span:hover{
-    color: #98DFFF;
+#header .logo span:hover{
+    color: black;
 }
 
-header .menu{
+#header .menu{
     width: 400px;
     height: 100px;
 
@@ -75,31 +93,31 @@ header .menu{
 
     margin-right: 300px;
 }
-header .menu li{
+#header .menu li{
     width: 25%;
     
     text-align: center;
 }
-header .menu li a{
+#header .menu li a{
     font-size: 20px;
     color: white;
     display: inline-block;
     border-radius: 30px;
     transition: 0.2s;
 }
-header .menu li .About{
+#header .menu li .About{
     width: 67.63px;
 }
-header .menu li .Skills{
+#header .menu li .Skills{
     width: 56.41px;
 }
-header .menu li .Project{
+#header .menu li .Project{
     width: 74.17px;
 }
-header .menu li .Contect{
+#header .menu li .Contect{
     width: 81.89px;
 }
-header .menu li a:hover{
+#header .menu li a:hover{
     background-color: white;
     color: black;
 }
@@ -115,19 +133,21 @@ header .menu li a:hover{
 
     text-align: center;
 }
-.main h1{
-    font-size: 50px;
 
-    margin-bottom: 50px;
-}
 .main h2{
+    margin-top: 200px;
     font-size: 40px;
 }
+
+hr{
+    margin: 30px 300px;
+}
+
 .main h3{
     font-size: 30px;
-    font-weight: normal;
+    font-weight: bold;
 
-    margin-bottom: 50px;
+    /* margin-bottom: 200px; */
 }
 .main button{
     font-size: 15px;
