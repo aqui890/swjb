@@ -1,4 +1,4 @@
-/* 초기화 */
+/* s : 초기화 */
 *{
     margin: 0;
     padding: 0;
@@ -18,22 +18,22 @@ li{
 html{
     scroll-behavior: smooth;
 }
-/* //초기화 */
+/* e :초기화 */
 
-/* container */
+/* s :container */
 #container{
     width: 100%;
     height: 100%;
 
-    background: linear-gradient(to bottom, #98DFFF, rgba(0, 0, 0, 0.6)), url(images/bg.png) no-repeat;
+    background: linear-gradient(to bottom, #98DFFF, rgba(0, 0, 0, 0.6)), url(images/bgi.png) no-repeat;
     background-size: cover;
     background-position: center;
 
     color: white;
 }
-/* //container */
+/* e : container */
 
-/* header */
+/* s : header */
 header{
     width: 100%;
     height: 100px;
@@ -46,6 +46,7 @@ header{
 header .logo{
     width: 200px;
     height: 80px;
+    margin-left: 400px;
 }
 header .logo span{
     display: inline-block;
@@ -69,8 +70,10 @@ header .menu{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
+    font-weight: bold;
 
-    margin-right: 30px;
+    margin-right: 300px;
 }
 header .menu li{
     width: 25%;
@@ -81,7 +84,7 @@ header .menu li a{
     font-size: 20px;
     color: white;
     display: inline-block;
-
+    border-radius: 30px;
     transition: 0.2s;
 }
 header .menu li .About{
@@ -97,13 +100,12 @@ header .menu li .Contect{
     width: 81.89px;
 }
 header .menu li a:hover{
-    color: #98DFFF;
-    border-radius: 15px;
     background-color: white;
+    color: black;
 }
-/* //header */
+/* e : header */
 
-/* main */
+/* s : main */
 .main{
     width: 1000px;
     height: 700px;
@@ -128,10 +130,13 @@ header .menu li a:hover{
     margin-bottom: 50px;
 }
 .main button{
-    font-size: 30px;
+    font-size: 15px;
+    font-weight: bold;
 
-    width: 250px;
-    height: 90px;
+    margin-top: 95px;
+
+    width: 150px;
+    height: 50px;
     border: 3px solid #fff;
     border-radius: 45px;
     background-color: transparent;
@@ -162,9 +167,9 @@ header .menu li a:hover{
         transform: translateY(0px);
     }
 }
-/* //main */
+/* e : main */
 
-/* about */
+/* s : about */
 .about{
     width: 1200px;
     height: 800px;
@@ -230,9 +235,9 @@ header .menu li a:hover{
 .about .right .fa-brands{
     margin-right: 10px;
 }
-/* //about */
+/* e : about */
 
-/* skills */
+/* s : skills */
 .skills{
     width: 100%;
     height: 700px;
@@ -305,9 +310,9 @@ header .menu li a:hover{
 .skills .contents li:hover i{
     color: #fff;
 }
-/* //skills */
+/* e : skills */
 
-/* bg */
+/* s : bg */
 .bg{
     width: 100%;
     height: 700px;
@@ -316,4 +321,8 @@ header .menu li a:hover{
     background-position: center;
     background-attachment: fixed;
 }
-/* //bg */
+/* e : bg */
+.project{
+    height: 1200px;
+    margin-top: 0;
+}
