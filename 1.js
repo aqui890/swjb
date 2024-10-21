@@ -16,3 +16,14 @@ window.addEventListener("scroll", () => {
         });
     }
 });
+
+
+const address = document.querySelector("#address");
+const right = document.querySelector("#right");
+const mapIMG = document.querySelector("#mapmap");
+
+mapIMG.style.display = "none"
+address.addEventListener("click", function() {
+    right.classList.toggle("toggle")
+    mapIMG.classList.toggle("toggle2")
+})
