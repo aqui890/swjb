@@ -23,14 +23,14 @@
         <!-- s : header -->
         <div id="header">
             <div class="logo">
-                <span><a href="http://127.0.0.1:5501/swjb-main/index.html">YM</a></span>
+                <span class="h1"><a href="http://127.0.0.1:5501/swjb-main/index.html">YM</a></span>
             </div>
 
             <ul class="menu">
-                <li><a href="#about-link" class="About">About</a></li>
-                <li><a href="#skills-link" class="Skills">Skills</a></li>
-                <li><a href="#project-link">Project</li></a>
-                <li><a href="#contact-links" class="Contact">Contact</a></li>
+                <li class="a"><a href="#about-link" class="About">About</a></li>
+                <li class="a"><a href="#skills-link" class="Skills">Skills</a></li>
+                <li class="a"><a href="#project-link">Project</li></a>
+                <li class="a"><a href="#contact-links" class="Contact">Contact</a></li>
             </ul>
         </div>
         <!-- e : header -->
@@ -68,21 +68,21 @@
                 <b style="font-size: 24px;">I'm Web Publisher And Web Front-End Developer</b>
                 <ul style="width: 500px;">
                     <br>
-                    <li><span style="font-weight: bold;">이름 :</span> 유예민</li>
+                    <li><span style="font-weight: bold;">Name</span> 유예민</li>
                     <br>
-                    <li><span style="font-weight: bold;">생년월일 :</span> 2008.10.02</li>
-                    <br>
-                </ul>
-                <ul style="width: 500px;">
-                    <li><span style="font-weight: bold; ">주소지</span> 경기도 수원시</li>
-                    <br>
-                    <li><span style="font-weight: bold;">연락처</span> 010-9657-8235</li>
+                    <li><span style="font-weight: bold;">Birth</span> 2008.10.02</li>
                     <br>
                 </ul>
                 <ul style="width: 500px;">
-                    <li><span style="font-weight: bold;">학력</span> 수원정보과학고 재학중</li>
+                    <li><span style="font-weight: bold; ">Address</span> 경기도 수원시</li>
                     <br>
-                    <li><span style="font-weight: bold;">이메일</span> akqwy980@gmail.com
+                    <li><span style="font-weight: bold;">Contact</span> 010-9657-8235</li>
+                    <br>
+                </ul>
+                <ul style="width: 500px;">
+                    <li><span style="font-weight: bold;">Education</span> 수원정보과학고 재학중</li>
+                    <br>
+                    <li><span style="font-weight: bold;">Mail</span> akqwy980@gmail.com
                     </li>
                 </ul>
                 <br>
@@ -101,7 +101,6 @@
         <div class="skillsInnerWrap">
             <h2 class="h2">Skills</h2>
             <h1 class="h1">What I Do</h1>
-
             <ul class="contents">
                 <li>
                     <h3><i class="fa-brands fa-html5"></i> HTML</h3>
@@ -137,21 +136,30 @@
 
             <ul class="contents">
                 <li>
-                    <h3 style="font-size: 25px;">나의 포트폴리오 만들기(미래유망)</h3>
+                    <h3 style="font-size: 25px;">나의 포트폴리오 만들기 <span>(미래유망)</span></h3>
                     <p class="bold"><span style="font-size: 16px; color: #ccc;">2024 ~ 현재</span> <br>미래유망에서 배운
                         HTML,CSS,Bootstrap등을 활용하여 만든 포트폴리오 입니다 <br></p>
+                    <div class="projectimg">
+                        <img src="images/project.png" alt="Future-imaes" style="width: 300px; height: 100px;">
+                    </div>
                 </li>
 
                 <li>
                     <h3 style="font-size: 25px;">나의 포트폴리오 만들기(학교)</h3>
                     <p class="bold"><span style="font-size: 16px; color: #ccc;">2024.09.30 ~ 현재</span> <br> 학교에서 배운
                         HTML,CSS을 활용하여 만든 포트폴리오 입니다.</p>
+                        <div class="projectimg">
+                            <img src="images/projects2.png" alt="Future-imaes" style="width: 300px; height: 100px; margin-top: 24px;">
+                        </div>
                 </li>
 
                 <li>
                     <h3 style="font-size: 25px;">C언어 프로그램 프로젝트(학교)</h3>
                     <p class="bold"><span style="font-size: 16px; color: #ccc;">2024.06.13 ~ 현재</span> <br> 지금까지 배운 C언어를
                         활용하여 프로그램을 만드는 프로젝트입니다.</p>
+                        <div class="projectimg">
+                            <img src="images/projects3.png" alt="Future-imaes" style="width: 300px; height: 100px;">
+                        </div>
                 </li>
             </ul>
         </div>
@@ -184,15 +192,17 @@
 
             <div class="right" id="right">
                 <p>name</p>
-                <input type="text" placeholder="이름을 입력학세요">
+                <input type="text" placeholder="이름을 입력학세요" class="text">
                 <p>email</p>
-                <input type="email" placeholder="이메일을 입력하세요">
+                <input type="email" placeholder="이메일을 입력하세요" class="email">
                 <p>memo</p>
-                <textarea name="" id=""></textarea>
+                <textarea name="" id="textarea"></textarea>
                 <br>
-                <button type="submit">Send</button>
+                <button type="submit" id="btn">Send</button>
             </div>
         </div>
+
+        
     </div>
     <!-- e : contact -->
 

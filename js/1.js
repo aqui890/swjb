@@ -27,3 +27,14 @@ address.addEventListener("click", function() {
     right.classList.toggle("toggle")
     mapIMG.classList.toggle("toggle2")
 })
+
+const btn = document.querySelector("#btn");
+const textarea = document.querySelector("#textarea");
+const input = document.querySelector(".text");
+const input2 = document.querySelector(".email");
+
+btn.addEventListener("click", function() {
+    textarea.value = "";
+    input.value = "";
+    input2.value = "";
+})
