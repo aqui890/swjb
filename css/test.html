@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .circle-container {
+            position: relative;
+            width: 150px;
+            height: 150px;
+        }
+
+        .circle {
+            width: 100px;
+            height: 100px;
+            background-color: #4CAF50;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 16px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+        }
+
+        .circle-container:before,
+        .circle-container:after {
+            content: '';
+            position: absolute;
+            border: 10px solid transparent;
+            border-top-color: black;
+            /* 화살표 색상 */
+            width: 0;
+            height: 0;
+        }
+
+        .circle-container:before {
+            top: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .circle-container:after {
+            bottom: 15px;
+            left: 50%;
+            transform: translateX(-50%) rotate(180deg);
+        }
+
+        .arrow-left,
+        .arrow-right {
+            content: '';
+            position: absolute;
+            border: 10px solid transparent;
+            border-top-color: black;
+            width: 0;
+            height: 0;
+        }
+
+        .arrow-left {
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%) rotate(-90deg);
+        }
+
+        .arrow-right {
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%) rotate(90deg);
+        }
+
+        .circle-container .circle::before,
+        .circle-container .circle::after {
+            display: none;
+            /* 원 내부 화살표 숨김 */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="circle-container">
+        <div class="circle">클릭</div>
+        <div class="arrows"></div>
+    </div>
+</body>
+
+</html>

@@ -28,13 +28,31 @@ address.addEventListener("click", function() {
     mapIMG.classList.toggle("toggle2")
 })
 
-const btn = document.querySelector("#btn");
-const textarea = document.querySelector("#textarea");
-const input = document.querySelector(".text");
-const input2 = document.querySelector(".email");
+// const btn = document.querySelector("#btn");
+// const textarea = document.querySelector("#textarea");
+// const input = document.querySelector(".text");
+// const input2 = document.querySelector("#email");
 
-btn.addEventListener("click", function() {
-    textarea.value = "";
-    input.value = "";
-    input2.value = "";
-})
+// btn.addEventListener("click", function() {
+//     textarea.value = "";
+//     input.value = "";
+//     input2.value = "";
+// })
+
+const leftIMG = document.querySelectorAll(".left img");
+const adiv = document.querySelectorAll(".adiv");
+let i;
+
+leftIMG.forEach(img => {
+    img.addEventListener("click", function() {
+        for(i = 0; i < 5; i++){
+            if(adiv[i].style.opacity == "0"){
+                adiv[i].style.opacity = "1";
+            } else{
+                adiv[i].style.opacity = "0";
+            }
+        }
+
+        // adiv.classList.toggle("opacity");
+    });
+});

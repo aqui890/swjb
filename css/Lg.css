@@ -22,6 +22,44 @@ html{
     scroll-behavior: smooth;
 }
 
+.font{
+    font-family: 'SpoqaHanSansNeo-Regular', sans-serif;
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'SpoqaHanSansNeo-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SpoqaHanSansNeo-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TmonMonsori';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/TmonMonsori.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.adiv{
+    width: 250px;
+    height: 50px;
+    border: 3px solid #222;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    transition: 0.5s;
+    opacity: 0;
+    font-weight: bold;
+    font-family: 'SpoqaHanSansNeo-Regular';
+}
+
+.opacity{
+    opacity: 1;
+}
+
 .a{
     font-family: "Bebas Neue", sans-serif;
     font-style: normal;
@@ -83,11 +121,7 @@ html{
     width: 100%;
     height: 100px;
 
-    background-color: transparent;
-
-    
-
-    z-index: 1000;
+    z-index: 999;
 
     display: flex;
     justify-content: space-between;
@@ -127,10 +161,12 @@ html{
 
     margin-right: 300px;
 }
+
 #header .menu li{
     width: 25%;
     text-align: center;
 }
+
 #header .menu li a{
     display: inline-block;
     
@@ -174,6 +210,7 @@ hr{
 
     /* margin-bottom: 200px; */
 }
+
 .main button{
     font-size: 15px;
     font-weight: bold;
@@ -188,6 +225,7 @@ hr{
 
     transition: 0.3s;
 }
+
 .main button:hover{
     background-color: #fff;
     color: #000;
@@ -200,6 +238,7 @@ hr{
 
     animation: mouse 1s infinite ease-in-out;
 }
+
 @keyframes mouse{
     0%{
         transform: translateY(0px);
@@ -218,9 +257,10 @@ hr{
     width: 1200px;
     height: 800px;
     margin: 0 auto;
-
     /* margin-top: 0; */
-    padding-top: 50px;
+    
+    margin-top: 100px;
+    padding-top: 100px;
 }
 
 .about .contents{
@@ -228,48 +268,74 @@ hr{
     height: 500px;
     margin-top: 50px;
     display: flex;
+    justify-content: center;
+    /* border: 1px solid black; */
+    position: relative;
 }
 
 .about .left{
     width: 400px;
     height: 500px;
+    /* border: 1px solid black; */
 }
+
+.about .left .pt{
+    position: absolute;
+    right: 280px;
+    top: 100px;
+    animation: 1s mousex infinite;
+}
+
+@keyframes mousex{
+    0%{
+        transform: translateX(0px);
+    }
+    50%{
+        transform: translateX(10px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
+}
+
 .about .left img{
-    width: 100%;
-    height: 100%;
-    border-radius: 15px;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    margin-left: 75px;
+}   
+
+.about .left img:hover{
+    cursor: pointer;
 }
 
-.about .right{
-    width: 800px;
-    height: 500px;
-
-    padding-left: 20px;
+.name{
+    top: 200px;
+    left: 200px;
 }
+
+.birth{
+    top: 300px;
+    left:300px;
+}
+
+.address{
+    top: 400px;
+    left: 465px;
+}
+
+.email{
+    top: 300px;
+    left: 650px;
+}
+
+.education{
+    top: 200px;
+    left: 750px;
+}
+
 .about .right h1{
     font-size: 30px;
-}
-.about .right h1 span{
-    color: #003366;
-}
-.about .right li{
-    font-size: 23px;
-    padding: 5px 0;
-}
-.about .right .fa-facebook{
-    font-size: 50px;
-    color: #3b5998;
-}
-.about .right .fa-youtube{
-    font-size: 50px;
-    color: red;
-}
-.about .right .fa-instagram{
-    font-size: 50px;
-    color: rgb(224, 143, 224);
-}
-.about .right .fa-brands{
-    margin-right: 10px;
 }
 /* e : about */
 
@@ -315,6 +381,7 @@ hr{
     background-color: #fff;
 
     font-size: 20px;
+    font-weight: bold;
 
     padding: 20px;
 
@@ -322,6 +389,7 @@ hr{
     box-shadow: 0 0 .5rem 0 rgba(68,68,68,.4);
 
     transition: background-color 0.3s, color 0.3s, 0.5s;
+    
 
 }
 
@@ -337,6 +405,7 @@ hr{
     color: #fff;
     transform: translateY(5px);
 }
+
 .skills .contents li:hover i{
     color: #fff;
 }
@@ -364,7 +433,9 @@ hr{
     height: 100px;
     margin: 0 auto;
 
-    margin-top: 100px;
+    /* scroll-margin-top: 80px; */
+    padding-top: 100px; 
+    /* margin-top: 100px; */
 }
 
 .contact > h2 ~ .contents{
@@ -390,6 +461,20 @@ hr{
     border-radius: 8px;
     padding: 15px;
     margin-top: 20px;
+    transition: 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+}
+
+.contact .left > div:nth-child(1):hover{
+    transform: scale(1.1);
+}
+
+.contact .left > div:nth-child(2):hover{
+    transform: scale(1.1);
+}
+
+.contact .left > div:nth-child(3):hover{
+    transform: scale(1.1);
 }
 
 .contact .right p{
@@ -400,14 +485,15 @@ hr{
     width: 800px;
     height: 30px;
     border: 1px solid #ccc;
-    border-radius: 8px;
+    border-radius: 15px;
 }
 
 .contact .right textarea{
     width: 800px;
     height: 400px;
     border: 1px solid #ccc;
-    border-radius: 8px;
+    border-radius: 15px;
+    resize: none;
 }
 
 .contact button{
