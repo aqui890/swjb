@@ -56,3 +56,20 @@ leftIMG.forEach(img => {
         // adiv.classList.toggle("opacity");
     });
 });
+
+
+const linkprojectf = document.querySelector(".linkproject-f");
+const linkprojectweb = document.querySelector(".linkproject-web");
+const linkprojectc = document.querySelector(".linkproject-c");
+
+linkprojectf.addEventListener("click", function() {
+    window.location.href = "https://aqui890.github.io/portfolio2";
+});
+
+linkprojectweb.addEventListener("click", function() {
+    window.location.href = "https://aqui890.github.io/swjb";
+});
+
+linkprojectc.addEventListener("click", function() {
+    window.location.href = "https://www.miricanvas.com/v/13t60p7";
+});
